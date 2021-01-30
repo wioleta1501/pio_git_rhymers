@@ -7,6 +7,9 @@ import java.util.Random;
 
 class RhymersDemo {
 
+	public static final java.lang.String TEXT_TOTAL_REJECTED_IS = "total rejected is ";
+	public static final int NEXT_INT = 20;
+
 	public static void main(String[] args) {
 		Rhymersfactory factory = new DefaultRhymersFactory();
 		DefaultCountingOutRhymer[] rhymers = { factory.getStandardRhymer(), factory.getFalseRhymer(),
@@ -20,7 +23,7 @@ class RhymersDemo {
 		}
 
 		for (int i = 1; i < 15; i++) {
-			rhymers[3].countIn(random.nextInt(20));
+			rhymers[3].countIn(random.nextInt(NEXT_INT));
 		}
 		
 		for (DefaultCountingOutRhymer rhymer : rhymers) {
@@ -30,7 +33,7 @@ class RhymersDemo {
 			System.out.println();
 		}
 		
-		System.out.println("total rejected is "
+		System.out.println(TEXT_TOTAL_REJECTED_IS
 				+ ((HanoiRhymer) rhymers[3]).reportRejected());
 		
 	}
