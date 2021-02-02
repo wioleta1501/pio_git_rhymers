@@ -11,5 +11,4 @@ public interface Rhymersfactory {
 	DefaultCountingOutRhymer getFIFORhymer();
 
 	DefaultCountingOutRhymer getHanoiRhymer();
-
 }
